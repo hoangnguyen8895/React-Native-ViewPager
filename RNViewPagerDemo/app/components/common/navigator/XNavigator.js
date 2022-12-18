@@ -4,8 +4,12 @@
 
 "use strict";
 
-import { StyleSheet, Platform, Text, Image, BackAndroid } from "react-native";
-import { ViewPropTypes } from "deprecated-react-native-prop-types";
+import { StyleSheet, Platform, Image, BackAndroid } from "react-native";
+import {
+  ViewPropTypes,
+  TextPropTypes,
+  ImagePropTypes,
+} from "deprecated-react-native-prop-types";
 import { Navigator } from "react-native-deprecated-custom-components";
 import { PropTypes } from "react";
 import React from "react";
@@ -32,9 +36,9 @@ export default class XNavigator extends React.Component {
     ...Navigator.props,
     sceneStyle: ViewPropTypes.style,
     navigationBarStyle: ViewPropTypes.style,
-    titleStyle: Text.propTypes.style,
-    barButtonTextStyle: Text.propTypes.style,
-    barButtonIconStyle: Image.propTypes.style,
+    titleStyle: TextPropTypes.style,
+    barButtonTextStyle: TextPropTypes.style,
+    barButtonIconStyle: ImagePropTypes.style,
     showNavigationBar: PropTypes.bool,
     renderNavigationBar: PropTypes.func,
     augmentScene: PropTypes.func,

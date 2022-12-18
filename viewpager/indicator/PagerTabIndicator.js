@@ -6,7 +6,11 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { StyleSheet, View, Image, Text, TouchableOpacity } from "react-native";
-import { ViewPropTypes } from "deprecated-react-native-prop-types";
+import {
+  ViewPropTypes,
+  TextPropTypes,
+  ImagePropTypes,
+} from "deprecated-react-native-prop-types";
 import IndicatorViewPager from "../IndicatorViewPager";
 
 export default class PagerTabIndicator extends Component {
@@ -17,16 +21,16 @@ export default class PagerTabIndicator extends Component {
     tabs: PropTypes.arrayOf(
       PropTypes.shape({
         text: PropTypes.string,
-        iconSource: Image.propTypes.source,
-        selectedIconSource: Image.propTypes.source,
+        iconSource: ImagePropTypes.source,
+        selectedIconSource: ImagePropTypes.source,
       })
     ).isRequired,
     itemStyle: ViewPropTypes.style,
     selectedItemStyle: ViewPropTypes.style,
-    iconStyle: Image.propTypes.style,
-    selectedIconStyle: Image.propTypes.style,
-    textStyle: Text.propTypes.style,
-    selectedTextStyle: Text.propTypes.style,
+    iconStyle: ImagePropTypes.style,
+    selectedIconStyle: ImagePropTypes.style,
+    textStyle: TextPropTypes.style,
+    selectedTextStyle: TextPropTypes.style,
     changePageWithAnimation: PropTypes.bool,
   };
 
